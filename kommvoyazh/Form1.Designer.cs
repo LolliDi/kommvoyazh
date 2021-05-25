@@ -45,7 +45,6 @@ namespace kommvoyazh
             // 
             resources.ApplyResources(this.vvodkolputei, "vvodkolputei");
             this.vvodkolputei.Name = "vvodkolputei";
-            this.vvodkolputei.TextChanged += new System.EventHandler(this.vvodkolputei_TextChanged);
             // 
             // sohrrazm
             // 

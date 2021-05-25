@@ -39,11 +39,6 @@ namespace kommvoyazh
 
         }
 
-        private void vvodkolputei_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Vvodmas_Click(object sender, EventArgs e)
         {
             vvodint();
