@@ -98,14 +98,18 @@ namespace kommvoyazh
             next.Visible = !next.Visible;
             otvet.Visible = !otvet.Visible;
             restart.Visible = !restart.Visible;
-            for (int i = 0; i <= mas.Rows.Count; i++)
-            {
-                mas.Rows.RemoveAt(0);
-            }
-            for (int i = 0; i <= mas.Columns.Count; i++)
-            {
-                mas.Columns.RemoveAt(0); ;
-            }
+            otvet.ReadOnly = true;
+            mas.DataSource = null;
+            mas.Rows.Clear();
+            mas.Columns.Clear();
+            //for (int i = 0; i <= mas.Rows.Count; i++)
+            //{
+            //    mas.Rows.RemoveAt(1);
+            //}
+            //for (int i = 0; i <= mas.Columns.Count; i++)
+            //{
+            //    mas.Columns.RemoveAt(1); ;
+            //}
 
             for (int i = 0; i < uzli; i++) //точка отправления - передаем в метод для поиска путей
             {
