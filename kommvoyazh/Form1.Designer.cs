@@ -70,7 +70,8 @@ namespace kommvoyazh
             // 
             // mas
             // 
-            this.mas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mas.AllowUserToAddRows = false;
+            this.mas.AllowUserToDeleteRows = false;
             this.mas.Location = new System.Drawing.Point(12, 12);
             this.mas.Name = "mas";
             this.mas.RowTemplate.Height = 25;
@@ -139,6 +140,7 @@ namespace kommvoyazh
             this.Controls.Add(this.vvodkolputei);
             this.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.mas)).EndInit();
             this.ResumeLayout(false);

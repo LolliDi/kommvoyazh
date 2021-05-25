@@ -30,11 +30,6 @@ namespace kommvoyazh
                 sohrrazm.Visible = false;
                 vvodkolputei.Visible = false;
                 mas.Visible = true;
-                for (int i = 0; i < mas.Rows.Count; i++)
-                {
-                    mas.Rows.RemoveAt(i);
-                    mas.Columns.RemoveAt(i);
-                }
 
                 Vvodmas.Visible = true;
                 for (int i = 0; i < uzli; i++)
@@ -103,6 +98,15 @@ namespace kommvoyazh
             next.Visible = !next.Visible;
             otvet.Visible = !otvet.Visible;
             restart.Visible = !restart.Visible;
+            for (int i = 0; i <= mas.Rows.Count; i++)
+            {
+                mas.Rows.RemoveAt(0);
+            }
+            for (int i = 0; i <= mas.Columns.Count; i++)
+            {
+                mas.Columns.RemoveAt(0); ;
+            }
+
             for (int i = 0; i < uzli; i++) //точка отправления - передаем в метод для поиска путей
             {
                 Array.Resize(ref puti, puti.Length + 1);
@@ -127,6 +131,7 @@ namespace kommvoyazh
                 if (f[i] == min)
                     otvet.Text += (puti[i] + ", F = " + f[i]+ "\r\n");
             }
+
         }
 
         private void restart_Click(object sender, EventArgs e)
