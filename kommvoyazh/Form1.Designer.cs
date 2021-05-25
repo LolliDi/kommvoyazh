@@ -35,6 +35,8 @@ namespace kommvoyazh
             this.mas = new System.Windows.Forms.DataGridView();
             this.Vvodmas = new System.Windows.Forms.Button();
             this.next = new System.Windows.Forms.Button();
+            this.otvet = new System.Windows.Forms.TextBox();
+            this.restart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,11 +102,35 @@ namespace kommvoyazh
             this.next.Visible = false;
             this.next.Click += new System.EventHandler(this.next_Click);
             // 
+            // otvet
+            // 
+            this.otvet.Location = new System.Drawing.Point(12, 12);
+            this.otvet.Multiline = true;
+            this.otvet.Name = "otvet";
+            this.otvet.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.otvet.Size = new System.Drawing.Size(566, 263);
+            this.otvet.TabIndex = 6;
+            this.otvet.Visible = false;
+            // 
+            // restart
+            // 
+            this.restart.ForeColor = System.Drawing.Color.Black;
+            this.restart.Location = new System.Drawing.Point(225, 274);
+            this.restart.Name = "restart";
+            this.restart.Size = new System.Drawing.Size(99, 36);
+            this.restart.TabIndex = 7;
+            this.restart.Text = "Начать заново";
+            this.restart.UseVisualStyleBackColor = true;
+            this.restart.Visible = false;
+            this.restart.Click += new System.EventHandler(this.restart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 316);
+            this.Controls.Add(this.restart);
+            this.Controls.Add(this.otvet);
             this.Controls.Add(this.next);
             this.Controls.Add(this.Vvodmas);
             this.Controls.Add(this.mas);
@@ -128,6 +154,8 @@ namespace kommvoyazh
         private System.Windows.Forms.DataGridView mas;
         private System.Windows.Forms.Button Vvodmas;
         private System.Windows.Forms.Button next;
+        private System.Windows.Forms.TextBox otvet;
+        private System.Windows.Forms.Button restart;
     }
 }
 
